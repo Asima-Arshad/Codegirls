@@ -28,14 +28,14 @@ app.get('/', function (req, res) {
             resolve (userData[1]);
         })
     }
-    
+
     getsalary().then((salary) => {
         console.log(salary);
         return getBio();
     }).then((user)=>{
         console.log(user);
     }); 
-   
+});
 app.listen(PORT,()=> {
     console.log("server is running at " + PORT)
 });
